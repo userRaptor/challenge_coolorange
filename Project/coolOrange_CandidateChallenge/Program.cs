@@ -20,33 +20,20 @@ namespace coolOrange_CandidateChallenge
             Array.Swap(myArray, 0, myArray.Length - 1);
 
             Console.WriteLine("\nExercise 04:");
-            Array.ShiftLeftByOne(myArray, 3, myArray.Length - 1);
+            int[] shiftArray = { 1, 2, 5, 3, 7, 9, 10 };
+            Array.ShiftLeftByOne(shiftArray, 0, 5);
 
             Console.WriteLine("\nExercise 05:");
             int[] randomArray = Array.CreateRandomArray(8, 0, 9);
             Console.WriteLine(string.Join(", ", randomArray));
 
             Console.WriteLine("\nExercise 06:");
-            int[][] randomMatrix = Array.CreateRandomMatrix(4, 4, 0, 9);
-            for (int i = 0; i < randomMatrix.Length; i++)
-            {
-                for (int j = 0; j < randomMatrix[i].Length; j++)
-                {
-                    Console.Write(randomMatrix[i][j] + "\t");
-                }
-                Console.WriteLine();
-            }
+            int[,] randomMatrix = Array.CreateRandomMatrix(4, 4, 0, 9);
 
             Console.WriteLine("\nExercise 07:");
-            int[][] copyArray = Array.CopyArray(myArray);
-            for (int i = 0; i < copyArray.Length; i++)
-            {
-                for (int j = 0; j < copyArray[i].Length; j++)
-                {
-                    Console.Write(copyArray[i][j] + "\t");
-                }
-                Console.WriteLine();
-            }
+            //int[][] copyArray = Array.CopyArray(myArray);     // jagged array
+            int[,] copyArray = Array.CopyArray(myArray);        // 2D-Array
+
 
             Console.WriteLine("\nExercise 08:");
             int[] sortedArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
