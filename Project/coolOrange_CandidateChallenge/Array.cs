@@ -133,8 +133,28 @@ namespace coolOrange_CandidateChallenge
 
 		public static int FindInSortedArray(int[] array, int number)
 		{
-			throw new NotImplementedException();
-		}
+            int left = 0;
+            int right = array.Length - 1;
+
+            while (left <= right)
+            {
+                int mid = (left + right)/2;
+
+                if (array[mid] == number)
+                {
+                    return mid;
+                } else if (array[mid] < number)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;     
+                }
+            }
+
+            return -1;  // target was not found
+        }
 
 	}
 }

@@ -48,7 +48,11 @@ namespace coolOrange_CandidateChallenge
                 Console.WriteLine();
             }
 
-
+            Console.WriteLine("\nExercise 08:");
+            int[] sortedArray = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int posSortedArray = Array.FindInSortedArray(sortedArray, 9);
+            Console.WriteLine(string.Join(", ", sortedArray));
+            Console.WriteLine($"position of the number: {posSortedArray}");
 
             //Console.ReadLine();
         }
