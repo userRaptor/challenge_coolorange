@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.SymbolStore;
 
 namespace coolOrange_CandidateChallenge
 {
@@ -41,7 +42,15 @@ namespace coolOrange_CandidateChallenge
             Console.WriteLine(string.Join(", ", sortedArray));
             Console.WriteLine($"position of the number: {posSortedArray}");
 
+
+            String phrase = "racecar";
+            bool bPalindrome = PalindromeChecker.IsPalindrome(phrase);
+            Console.WriteLine(bPalindrome);
+
             //Console.ReadLine();
+
+
+
         }
     }
 }
