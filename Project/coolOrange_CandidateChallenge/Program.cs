@@ -22,6 +22,13 @@ namespace coolOrange_CandidateChallenge
             Console.WriteLine("\nExercise 04:");
             Array.ShiftLeftByOne(myArray, 3, myArray.Length - 1);
 
+            Console.WriteLine("\nExercise 05:");
+            int[] randomArray = Array.CreateRandomArray(8, 0, 9);
+            Console.WriteLine(string.Join(", ", randomArray));
+
+            Console.WriteLine("\nExercise 06:");
+
+
             //Console.ReadLine();
         }
     }
