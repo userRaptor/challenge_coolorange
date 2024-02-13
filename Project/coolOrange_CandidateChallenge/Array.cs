@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Policy;
 
 namespace coolOrange_CandidateChallenge
 {
@@ -88,16 +89,34 @@ namespace coolOrange_CandidateChallenge
 			Random rnd = new Random();
 			for (int i = 0; i < size; i++)
 			{
-				randomArray[i] = rnd.Next(minValue, maxValue);
-			}
+				randomArray[i] = rnd.Next(minValue+1, maxValue);    // The random number must be between min and max. Excluded the values min and max
+            }
 
 			return randomArray;
 		}
 
 		public static int[][] CreateRandomMatrix(int rows, int columns, int minValue, int maxValue)
 		{
-			throw new NotImplementedException();
-		}
+            if (minValue > maxValue || rows <= 0 || columns <= 0)
+            {
+                throw new ArgumentException("error in input");
+            }
+
+            int[][] randomMatrix = new int[rows][];
+
+            Random rnd = new Random();
+
+            for (int i = 0; i < rows; i++)
+            {
+                randomMatrix[i] = new int[columns];
+                for (int j = 0; j < columns; j++)
+                {
+                    randomMatrix[i][j] = rnd.Next(minValue+1, maxValue);        
+                }
+            }
+
+            return randomMatrix;
+        }
 
 		public static int[][] CopyArray(int[] array)
 		{

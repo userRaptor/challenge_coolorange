@@ -27,6 +27,15 @@ namespace coolOrange_CandidateChallenge
             Console.WriteLine(string.Join(", ", randomArray));
 
             Console.WriteLine("\nExercise 06:");
+            int[][] randomMatrix = Array.CreateRandomMatrix(4, 4, 0, 9);
+            for (int i = 0; i < randomMatrix.Length; i++)
+            {
+                for (int j = 0; j < randomMatrix[i].Length; j++)
+                {
+                    Console.Write(randomMatrix[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
 
 
             //Console.ReadLine();
