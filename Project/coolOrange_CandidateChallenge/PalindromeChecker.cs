@@ -6,7 +6,17 @@ namespace coolOrange_CandidateChallenge
     {
         public static bool IsPalindrome(string s)
         {
-            throw new NotImplementedException();
+            if (s.Length <= 1)
+            {
+                return true;
+            }
+
+            if (s[0] != s[s.Length - 1])
+            {
+                return false;
+            }
+
+            return IsPalindrome(s.Substring(1, s.Length - 2));
         }
     }
 }
