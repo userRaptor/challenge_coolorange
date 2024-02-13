@@ -14,6 +14,8 @@ namespace coolOrange_CandidateChallenge
             int posMin = Array.FindMinPosition(myArray, 0, myArray.Length - 1);
             Console.WriteLine($"position of the minimum: {posMin}");
 
+            Array.Swap(myArray, 0, myArray.Length - 1);
+
             //Console.ReadLine();
         }
     }

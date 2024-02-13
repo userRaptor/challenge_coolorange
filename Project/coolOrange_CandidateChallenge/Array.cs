@@ -44,8 +44,21 @@ namespace coolOrange_CandidateChallenge
 
 		public static void Swap(int[] array, int position1, int position2)
 		{
-			throw new NotImplementedException();
-		}
+            if (array == null || array.Length == 0 || position1 > position2 || position1 < 0 || position2 > array.Length - 1)
+            {
+                throw new ArgumentException("error in input");
+            }
+            int pos1Value = array[position1];
+			int pos2Value = array[position2];
+
+            Console.WriteLine(string.Join(", ", array));
+
+            array[position1] = pos2Value;
+			array[position2] = pos1Value;
+
+            Console.WriteLine(string.Join(", ", array));
+
+        }
 
 		public static void ShiftLeftByOne(int[] array, int position1, int position2)
 		{
