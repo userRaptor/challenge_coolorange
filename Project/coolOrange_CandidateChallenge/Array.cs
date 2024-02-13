@@ -120,7 +120,15 @@ namespace coolOrange_CandidateChallenge
 
 		public static int[][] CopyArray(int[] array)
 		{
-			throw new NotImplementedException();
+            int[][] copyArray = new int[2][];
+
+            copyArray[0] = new int[array.Length];
+            array.CopyTo(copyArray[0], 0);
+
+            copyArray[1] = new int[array.Length];
+            array.CopyTo(copyArray[1], 0);
+
+            return copyArray;
 		}
 
 		public static int FindInSortedArray(int[] array, int number)

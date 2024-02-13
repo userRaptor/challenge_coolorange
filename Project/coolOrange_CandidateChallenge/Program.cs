@@ -37,6 +37,18 @@ namespace coolOrange_CandidateChallenge
                 Console.WriteLine();
             }
 
+            Console.WriteLine("\nExercise 07:");
+            int[][] copyArray = Array.CopyArray(myArray);
+            for (int i = 0; i < copyArray.Length; i++)
+            {
+                for (int j = 0; j < copyArray[i].Length; j++)
+                {
+                    Console.Write(copyArray[i][j] + "\t");
+                }
+                Console.WriteLine();
+            }
+
+
 
             //Console.ReadLine();
         }
