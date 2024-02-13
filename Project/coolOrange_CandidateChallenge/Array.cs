@@ -121,21 +121,6 @@ namespace coolOrange_CandidateChallenge
             return randomMatrix;
         }
 
-        /* Multidimensionales Array
-		public static int[][] CopyArray(int[] array)
-		{
-            int[][] copyArray = new int[2][];
-            copyArray[0] = new int[array.Length];
-            array.CopyTo(copyArray[0], 0);
-
-            copyArray[1] = new int[array.Length];
-            array.CopyTo(copyArray[1], 0);
-
-            return copyArray;
-		}
-
-        */
-        // Rückgabewert: jagged Array
         public static int[,] CopyArray(int[] array)
         {
             int[,] copyArray = new int[2, array.Length];
