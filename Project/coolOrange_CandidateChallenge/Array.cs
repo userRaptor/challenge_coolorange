@@ -25,8 +25,22 @@ namespace coolOrange_CandidateChallenge
 
 		public static int FindMinPosition(int[] array, int position1, int position2)
 		{
-			throw new NotImplementedException();
-		}
+            if (array == null || array.Length == 0 || position1 > position2 || position1 < 0 || position2 > array.Length - 1)
+            {
+                throw new ArgumentException("error in input");
+            }
+            int minValue = array[position1];
+			int positionOfMinimum = position1;
+            for (int i = position1; i <= position2; i++)
+            {
+                if (minValue > array[i])
+                {
+                    minValue = array[i];
+                    positionOfMinimum = i;
+                }
+            }
+            return positionOfMinimum;
+        }
 
 		public static void Swap(int[] array, int position1, int position2)
 		{
