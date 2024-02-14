@@ -60,12 +60,13 @@ namespace Assignment02_OOP
             return name;
         }
 
-
+        
         public int CompareTo(object obj)
         {
             Task compareTask = obj as Task;
             return this.GetPriority().CompareTo(compareTask.GetPriority());
         }
+
 
         public override string ToString()
         {

@@ -1,18 +1,27 @@
-﻿using System;
-
-using Assignment02_OOP;
-using coolOrange_CandidateChallenge;
+﻿using Assignment02_OOP;
 using NUnit.Framework;
+using System.Threading.Tasks;
 
-namespace coolOrange_CandidateChallengeTest
+namespace Assignment02_OOP
 {
     [TestFixture]
     public class TaskTests
     {
+
         [Test]
-        public void IsPalindrome_passing_empty_returns_true()
+        public void Task_CompareTo_Test()
         {
-            Assert.IsTrue(PalindromeChecker.IsPalindrome(""));
+
+            
+            /*
+            Task task1 = new Task("Task 1", Priority.MIN_PRIORITY);
+            Task task2 = new Task("Task 2", Priority.MAX_PRIORITY);
+
+            int comparisonResult = task1.CompareTo(task2);
+
+            Assert.AreEqual(-1, comparisonResult);
+            */
         }
+
     }
 }
