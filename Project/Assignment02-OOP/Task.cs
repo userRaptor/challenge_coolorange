@@ -33,16 +33,15 @@ namespace Assignment02_OOP
         private Priority priority;
         private int complexity;
 
-        public Task(string name, Priority priority, int complexity)
+        public Task(string name, Priority priority)
         {
             this.name = name;
-            this.priority = priority;
-            this.complexity = complexity;
+            this.priority = Priority.MED_PRIORITY;
         }
 
         public void SetPriority(Priority priority)
         {
-            throw new NotImplementedException();
+            this.priority = priority;
         }
 
         public int GetPriority()
@@ -52,12 +51,12 @@ namespace Assignment02_OOP
 
         public void SetComplexity(int complexity)
         {
-            throw new NotImplementedException();
+            this.complexity = complexity;
         }
 
         public int GetComplexity()
         {
-            throw new NotImplementedException();
+            return this.complexity;
         }
 
         public string GetName()
@@ -71,9 +70,6 @@ namespace Assignment02_OOP
             Task compareTask = obj as Task;
             return this.GetPriority().CompareTo(compareTask.GetPriority());
         }
-
-
-
 
         public override string ToString()
         {

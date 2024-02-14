@@ -13,13 +13,26 @@ namespace Assignment02_OOP
         {
             List<Task> tasks = new List<Task>();
 
-            Task homework = new Task("Doing Homework", Priority.MAX_PRIORITY, 8);
-            Task eatingLunch = new Task("Eating Lunch", Priority.MAX_PRIORITY, 2);
-            Task programming = new Task("Programming", Priority.MED_PRIORITY, 5);
+            Task homework = new Task("Doing Homework", Priority.MAX_PRIORITY);
+            Task programming = new Task("Programming", Priority.MED_PRIORITY);
+            Task eatingLunch = new Task("Eating Lunch", Priority.MIN_PRIORITY);
+            
 
             tasks.Add(homework);
-            tasks.Add(eatingLunch);
             tasks.Add(programming);
+            tasks.Add(eatingLunch);
+            
+
+            homework.SetComplexity(8);
+            homework.SetPriority(Priority.MAX_PRIORITY);
+
+            programming.SetComplexity(5);
+            programming.SetPriority(Priority.MED_PRIORITY);
+
+            eatingLunch.SetComplexity(2);
+            eatingLunch.SetPriority(Priority.MIN_PRIORITY);
+
+            
 
 
             Console.WriteLine("TO-DO\n-------------");
@@ -40,8 +53,6 @@ namespace Assignment02_OOP
             }
 
             Console.WriteLine("\n" + highestPriorityTask.GetName() + " is one of the most important tasks");
-
-
 
         }
 
