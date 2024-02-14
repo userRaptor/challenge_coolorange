@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Security.Policy;
-
 namespace coolOrange_CandidateChallenge
 {
 	public class Array

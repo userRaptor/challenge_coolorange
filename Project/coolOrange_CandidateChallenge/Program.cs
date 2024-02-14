@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics.SymbolStore;
 
 namespace coolOrange_CandidateChallenge
 {
