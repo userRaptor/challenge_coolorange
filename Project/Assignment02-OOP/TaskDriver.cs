@@ -8,9 +8,9 @@ namespace Assignment02_OOP
         {
             List<Task> tasks = new List<Task>();
 
-            Task homework = new Task("Doing Homework", Priority.MAX_PRIORITY);
+            Task homework = new Task("Doing Homework", Priority.MIN_PRIORITY);
             Task programming = new Task("Programming", Priority.MED_PRIORITY);
-            Task eatingLunch = new Task("Eating Lunch", Priority.MIN_PRIORITY);
+            Task eatingLunch = new Task("Eating Lunch", Priority.MAX_PRIORITY);
             
 
             tasks.Add(homework);

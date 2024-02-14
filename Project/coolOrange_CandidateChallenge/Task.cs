@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assignment02_OOP
+namespace coolOrange_CandidateChallenge
 {
     public enum Priority
     {
@@ -60,26 +60,18 @@ namespace Assignment02_OOP
             return name;
         }
 
-
-
-        public int CompareTo(object? obj)
+        public int CompareTo(object obj)
         {
-            /*
-             * x1 <  x2 return -1
-             * x1 == x2 return  0
-             * x1 >  x2 return  1
-             */
-
-            if (obj is null)
+            if (obj == null)
                 return 1;
 
             // Typumwandlung mit Überprüfung auf null
-            if (!(obj is Task compareTask))
+            var compareTask = obj as Task;
+            if (compareTask == null)
                 throw new ArgumentException("Object is not of type Task.");
 
             return this.GetPriority().CompareTo(compareTask.GetPriority());
         }
-
 
 
 
@@ -88,6 +80,5 @@ namespace Assignment02_OOP
             return $"{name} priority: {(int)priority} complexity: {complexity}";
         }
 
-        
     }
 }
