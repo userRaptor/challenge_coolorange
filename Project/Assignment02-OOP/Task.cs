@@ -2,7 +2,7 @@
 
 namespace Assignment02_OOP
 {
-    enum Priority
+    public enum Priority
     {
         MIN_PRIORITY = 1,
         MED_PRIORITY = 5,
@@ -23,7 +23,7 @@ namespace Assignment02_OOP
 
     }
 
-    internal class Task : IPriority, IComplexity, IComparable
+    public class Task : IPriority, IComplexity, IComparable
     {
         private string name;
         private Priority priority;

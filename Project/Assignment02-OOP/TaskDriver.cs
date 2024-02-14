@@ -2,7 +2,7 @@
 
 namespace Assignment02_OOP
 {
-    internal class TaskDriver
+    public class TaskDriver
     {
         static void Main(string[] args)
         {
