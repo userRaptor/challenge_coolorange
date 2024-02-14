@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace coolOrange_CandidateChallenge
+namespace Assignment02_OOP
 {
     enum Priority
     {
@@ -17,13 +17,13 @@ namespace coolOrange_CandidateChallenge
     {
         void SetPriority(Priority priority);
 
-        Priority GetPriority();
+        int GetPriority();
     }
 
     internal interface IComplexity
     {
-        void SetComplexity();
-        void GetComplexity();
+        void SetComplexity(int complexity);
+        int GetComplexity();
 
     }
 
@@ -36,44 +36,49 @@ namespace coolOrange_CandidateChallenge
         public Task(string name, Priority priority, int complexity)
         {
             this.name = name;
-            this.priority = Priority.MED_PRIORITY;
+            this.priority = priority;
             this.complexity = complexity;
-        }
-
-        public int CompareTo(object obj)
-        {
-            if (obj == null) return 1;
-
-            Task otherTask = obj as Task;
-            if (otherTask != null)
-            {
-                // Vergleich der Prioritäten der Tasks
-                return this.GetPriority().CompareTo(otherTask.GetPriority());
-            }
-            else
-            {
-                throw new ArgumentException("Object is not a Task");
-            }
-        }
-
-        public void GetComplexity()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Priority GetPriority()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SetComplexity()
-        {
-            throw new NotImplementedException();
         }
 
         public void SetPriority(Priority priority)
         {
             throw new NotImplementedException();
         }
+
+        public int GetPriority()
+        {
+            return (int)this.priority;
+        }
+
+        public void SetComplexity(int complexity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int GetComplexity()
+        {
+            throw new NotImplementedException();
+        }
+
+        public string GetName()
+        {
+            return name;
+        }
+
+
+        public int CompareTo(object obj)
+        {
+            Task compareTask = obj as Task;
+            return this.GetPriority().CompareTo(compareTask.GetPriority());
+        }
+
+
+
+
+        public override string ToString()
+        {
+            return $"{name} priority: {(int)priority} complexity: {complexity}";
+        }
+
     }
 }
