@@ -62,21 +62,19 @@ namespace Assignment02_OOP
 
 
 
-        public int CompareTo(object? obj)
+        // x1 <  x2 return -1
+        // x1 == x2 return  0
+        // x1 >  x2 return  1     
+
+        public int CompareTo(object obj)
         {
-            /*
-             * x1 <  x2 return -1
-             * x1 == x2 return  0
-             * x1 >  x2 return  1
-             */
+            if (obj == null)
+                throw new ArgumentException("Object is null.");
 
-            if (obj is null)
-                return 1;
-
-            // Typumwandlung mit Überprüfung auf null
-            if (!(obj is Task compareTask))
+            // Type Casting with null checking
+            var compareTask = obj as Task;
+            if (compareTask == null)
                 throw new ArgumentException("Object is not of type Task.");
-
             return this.GetPriority().CompareTo(compareTask.GetPriority());
         }
 

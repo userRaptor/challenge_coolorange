@@ -60,16 +60,18 @@ namespace coolOrange_CandidateChallenge
             return name;
         }
 
+        // x1 <  x2 return -1
+        // x1 == x2 return  0
+        // x1 >  x2 return  1     
         public int CompareTo(object obj)
         {
             if (obj == null)
-                return 1;
+                throw new ArgumentException("Object is null.");
 
-            // Typumwandlung mit Überprüfung auf null
+            // Type Casting with null checking
             var compareTask = obj as Task;
             if (compareTask == null)
                 throw new ArgumentException("Object is not of type Task.");
-
             return this.GetPriority().CompareTo(compareTask.GetPriority());
         }
 
