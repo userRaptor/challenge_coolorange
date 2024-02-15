@@ -49,10 +49,6 @@ namespace Assignment02_OOP
             }
 
             Console.WriteLine("\n" + highestPriorityTask.GetName() + " is one of the most important tasks");
-
-
-            
-        
         
         }
 
