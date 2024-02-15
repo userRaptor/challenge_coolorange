@@ -1,9 +1,7 @@
-﻿using coolOrange_CandidateChallenge;
+﻿using Assignment02_OOP;
 using NUnit.Framework;
-using System;
-using System.Threading.Tasks;
 
-namespace coolOrange_CandidateChallenge
+namespace Assignment02_OOP
 {
     [TestFixture]
     public class TaskTests
@@ -22,7 +20,7 @@ namespace coolOrange_CandidateChallenge
             // x1 == x2 return  0
             // x1 >  x2 return  1
 
-            int comparisonResult = task 1.CompareTo(task2);
+            int comparisonResult = task1.CompareTo(task2);
 
             Assert.AreEqual(1, comparisonResult);
         }

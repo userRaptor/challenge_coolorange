@@ -4,14 +4,19 @@
 <!--## Explanation of the solution: -->
 
 ## Structure:
-In this project, there are 3 project folders:
+In this project, there are 4 project folders:
++ Assignment01
 + Assignment02_OOP
 + coolOrange_CandidateChallenge
 + coolOrange_CandidateChallengeTest
 
+The Folder "Assignment01" implements implements the tasks "Basic Operations" and "Recursion". The main function is in the file Program.cs. 
+
 The Folder "Assignment02_OOP" implements the task "Object-Oriented Programming (OOP)". The main function is in the file TaskDriver.cs.
 
-The Folder "coolOrange_CandidateChallenge" implements the tasks "Basic Operations" and "Recursion". The main function is in the file Program.cs. Also included in this project folder is the file "Task.cs" from the Task "OOP" so that we can test it. See [Problems](#problems).
+The Folder "coolOrange_CandidateChallenge" implements all files, that are needed for the UnitTests
+
+he Task "OOP" so that we can test it. See [Problems](#problems).
 
 The Folder "coolOrange_CandidateChallengeTest" implements all the unit tests.
 
