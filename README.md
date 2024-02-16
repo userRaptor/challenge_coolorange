@@ -4,36 +4,25 @@
 <!--## Explanation of the solution: -->
 
 ## Structure:
-In this project, there are 4 project folders:
+In this project, there are 3 project folders:
 + Assignment01
 + Assignment02_OOP
-+ coolOrange_CandidateChallenge
-+ coolOrange_CandidateChallengeTest
++ TestProject
 
-The Folder "Assignment01" implements implements the tasks "Basic Operations" and "Recursion". The main function is in the file Program.cs. 
+The Folder "Assignment01" implements the tasks "Basic Operations" and "Recursion". The main function is in the file Program.cs. 
 
 The Folder "Assignment02_OOP" implements the task "Object-Oriented Programming (OOP)". The main function is in the file TaskDriver.cs.
 
-The Folder "coolOrange_CandidateChallenge" implements all files, that are needed for the UnitTests
-
-he Task "OOP" so that we can test it. See [Problems](#problems).
-
-The Folder "coolOrange_CandidateChallengeTest" implements all the unit tests.
-
+The Folder "TestProject" implements all files, that are needed for the UnitTests.
 
 
 ## How to run it:
-To run the project, we need the .NET Framework. For the tasks "Basic Operations" and "Recursion," and for the unit tests, it is enough to use .NET version 4.8. However, for the task "Object-Oriented Programming (OOP)," we need .NET version 8.0. Why this is the case, read the [Problems](#problems) section.
-
+To run the project, we need the .NET Framework. The Project use the .NET version 8.0. Why this is the case, read the [Problems](#problems) section.
 
 ## Problems:
-Unfortunately, I was not able to create a new project for the task "Object-Oriented Programming (OOP)" with .NET version 4.8. For me, it was only possible to create a new project with .NET version 8.0. So, the project folder "Assignment02_OOP" runs only with .NET version 8.0.
+Unfortunately, I was not able to create a new project for the task "Object-Oriented Programming (OOP)" with the .NET version 4.8. For me, it was only possible to create a new project with .NET version 8.0. 
 
-***
-The project folder **"Assignment02_OOP"** works with the Framework version .NET 8.0.
-Due to the different .NET versions used in the coolOrange_CandidateChallengeTest and Assignment02_OOP project folders, it is impossible to test the Task.cs class in coolOrange_CandidateChallengeTest.
-Therefore, I decided to put a copy of the Task.cs class into the coolOrange_CandidateChallenge folder.
-
+Since there were always conflicts between the two .NET versions 4.8 and 8.0, I decided to create the entire project using version 8.0.
 
 
 ## Notes:

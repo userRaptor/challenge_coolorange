@@ -42,9 +42,17 @@ namespace Assignment01
             Console.WriteLine($"position of the number: {posSortedArray}");
 
 
-            String phrase = "racecar";
+            Console.WriteLine("\nExercise PalindromeChecker:");
+            String phrase = "racecarX";
             bool bPalindrome = PalindromeChecker.IsPalindrome(phrase);
-            Console.WriteLine(bPalindrome);
+            if (bPalindrome)
+            {
+                Console.WriteLine($"The phrase '{phrase}' is a Palindrome!");
+            } else
+            {
+                Console.WriteLine($"The phrase '{phrase}' is not a Palindrome!");
+            }
+            
 
             //Console.ReadLine();
 
