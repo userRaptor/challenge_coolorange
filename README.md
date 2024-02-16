@@ -1,4 +1,4 @@
-# Bewerbungschallenge CoolOrange
+# Candidate Challenge CoolOrange
 
 
 <!--## Explanation of the solution: -->
